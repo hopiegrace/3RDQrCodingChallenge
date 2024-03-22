@@ -1,40 +1,27 @@
 <!DOCTYPE html>
 <html>
-<head>
-  	<title>Simulating One-Time-Password OTP</title>
-	<style>
-		body {
-			margin: 50px;
-			background-color: #fffde3;
-		}
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>One Time Password </title>
+        <style>
+        	body {background: lightblue; 
+            	text-align: center;
+            	font-family: arial;
+                color: navy;
+            }
+            button {padding: 10px; background:violet }
+            a {font-size: 0.5em; color: maroon}
+        </style>
 
-		h2 {
-			font-size: 35px;
-			font-family: cursive;
-		}
-	
-		a {
-			font-size: 25px;
-		}
+	</head>
 
-		button {
-			text-align: center;
-			font-size: 25px;
-			padding: 10px;
-			background-color: #F8E8EE;
-			cursor: pointer;
-			border-radius: 15px 15px 15px 15px;
-    		}
-	</style>
-</head>
-<body onload="generate()">
-  	<h2>Your OTP is: <span id="otp"></span></h2>
-  	<a href="#" onclick="generate()">New OTP</a>
-  	<br><br>
-  	<button onclick="check()">Enter the OTP</button>
+	<body onload="otpnew()">
+	<h1> Final Verification Step </h1>
+	<h2> Current OTP: <span id="otp"> _ _ _ _ _ _ </span> <a onclick="otpnew()" href="#"> New OTP </a></h2>
+    	<button onclick="check()"> Enter the OTP as shown above </button>
 
   	<script>
-    		function generate() {
+    		function otpnew() {
       			var otp = "";
       			for (var i = 0; i < 6; i++) {
        				otp += Math.floor(Math.random() * 10);
@@ -50,7 +37,7 @@
       			} else {
 				if (userOTP != window.OTP) {
 	 				alert("Invalid OTP. Please try again.");
-        				generate();
+        				otpnew();
       				} 
       			}
     		}
