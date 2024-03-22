@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+    	<title>SRC Honesty Store</title>
+    	<style>
+		body {
+			margin: 50px;
+			background-color: #fffde3;
+		}
+
+		button {
+			text-align: center;
+			font-size: 15px;
+			padding: 10px;
+			background-color: #F8E8EE;
+			cursor: pointer;
+			border-radius: 15px 15px 15px 15px;
+    		}
+	</style>
+</head>
+<body>
+    	<h1>SRC Honesty Store</h1>
+    	<h2>Menu</h2>
+    	<button onclick="totalP(45)">Burger = ₱45</button>
+    	<button onclick="totalP(30)">Fries = ₱30</button>
+    	<button onclick="totalP(25)">Juice = ₱25</button>
+    	<h2> Total Bill: </h2>
+    	<h3 id="totalPrice">0</h3>
+    	<button onclick="clearP()">clear</button>
+
+    	<script>
+        	let totalPrice = 0;
+        	function totalP(price) {
+            		totalPrice += price;
+            		document.getElementById('totalPrice').textContent = totalPrice;
+        	}
+
+        	function clearP() {
+            		totalPrice = 0;
+            		document.getElementById('totalPrice').textContent = totalPrice;
+        	}
+    	</script>
+</body>
+</html>

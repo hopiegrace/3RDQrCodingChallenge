@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head>
+  	<title>Replace All</title>
+	<style>
+		body {
+			margin: 50px;
+			background-color: #fffde3;
+		}
+
+		h1 {
+			font-size: 40px;
+			font-family: cursive;
+		}
+	
+		p {
+			font-size: 25px;
+		}
+
+		button {
+			text-align: center;
+			font-size: 15px;
+			padding: 10px;
+			background-color: #F8E8EE;
+			cursor: pointer;
+			border-radius: 15px 15px 15px 15px;
+    		}
+	</style>
+</head>
+<body>
+  	<h1> Replace All </h1>
+  	<p id="para">The quick brown fox jumps over the lazy dog. Never run out of data. Always check your load balance and subscriptions with just a tap on the GigaLife App!</p>
+  	<button onclick="cchange()">Change Text</button>
+  	<p id="parap"></p>
+  	<script>
+    		function cchange() {
+      		var text = document.getElementById("para").innerHTML;
+      		let oldV = prompt("Enter the character to be replaced:").toLowerCase();
+      		let newV = prompt("Enter the new character:");
+      		let val = new RegExp(oldV, 'g');
+      		let newText = text.replace(val, newV);
+      		document.getElementById("parap").innerHTML = newText;
+    		}
+  	</script>
+</body>
+</html>
