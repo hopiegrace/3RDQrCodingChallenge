@@ -1,33 +1,25 @@
 <!DOCTYPE html>
 <html>
-<head>
-  	<title>Modified FLAMES</title>
-	<style>
-		body {
-			margin: 50px;
-			background-color: #fffde3;
-		}
-
-		h1 {
-			font-size: 40px;
-			font-family: cursive;
-		}
-
-		button {
-			text-align: center;
-			font-size: 15px;
-			padding: 10px;
-			background-color: #F8E8EE;
-			cursor: pointer;
-			border-radius: 15px 15px 15px 15px;
-   		}
-	</style>
-</head>
+   <head>
+        <title>
+            Coding Challenge 5
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                background-color: lightseagreen;
+            }
+           
+        </style>
+    </head>
 <body>
-	<h1> FLAMES </h1>
-  	<button onclick="flames()">Play Flames</button>
-	<h3 id="name"></h3>
-  	<h3 id="result"></h3>
+	<h1> Modified FLAMES </h1>
+
+        <button onclick="flames()">Match Names</button>
+        <h3 id="name"></h3>
+
+        <h4>FLAMES Result:</h4>
+        <h3 id="result"></h3>
 
   	<script>
     		function flames() {
@@ -61,7 +53,7 @@
          		 break;
       			}
 
-      		document.getElementById("result").innerHTML = "Result: " + result;
+      		document.getElementById("result").innerHTML = result;
       		document.getElementById("name").innerHTML = name1 + " and " + name2;
     		}
   	</script>
